@@ -1,14 +1,17 @@
 <script lang="ts" src="./MapView.ts" />
 <template>
-    <div v-if="!isUserLocationReady" class="loading-map d-flex justify-content-center align-items-center">        
-      <div class="text-center">
-        <h3>Espero por favor</h3>
-        <span>Localizando...</span>
-      </div>
+    <div v-if="!isUserLocationReady"
+        class="loading-map d-flex justify-content-center align-items-center">
+        <div class="text-center">
+            <h3>Espere por favor!!</h3>
+            <span>Localizando...</span>
+        </div>
     </div>
-    <div v-show="isUserLocationReady" class="container-map" ref="mapElement">
-      <h3>Todo Ok - Mapa Cargado!</h3>
-    </div>
+
+    <div v-show="isUserLocationReady"
+        class="container-map"
+        ref="mapElement"
+    />
   </template>
 
 <style scoped>
@@ -26,6 +29,6 @@
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background-color: #dc7167;
+  background-color: #5cd9fefd;
 }
 </style>>

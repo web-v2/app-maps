@@ -1,8 +1,8 @@
-import { computed, onMounted } from "vue";
-import { useStore } from "vuex";
-import { StateInterface } from "@/store/index";
+import { computed, onMounted } from 'vue';
+import { useStore } from 'vuex';
+import { StateInterface } from '@/store/index';
 
-export const userPlacesStore =()=> {
+export const usePlacesStore = () => {
     const store = useStore<StateInterface>();
 
     onMounted( () => {
@@ -10,6 +10,7 @@ export const userPlacesStore =()=> {
             store.dispatch('places/getInitialLocation');
         }
     });
+    
     return {
         // State
         isLoading: computed( () => store.state.places.isLoading ),

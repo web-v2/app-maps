@@ -9,7 +9,7 @@ const actions: ActionTree<PlacesState, StateInterface> = {
             ({coords}) => commit('setLngLat', {lng: coords.longitude, lat: coords.latitude}),
             (err)=>{
                 console.error(err);
-                throw new Error('No geolocation :( ');
+                throw new Error('No geoLocation :( ');
             }
         );
     }
