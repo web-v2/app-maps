@@ -17,6 +17,7 @@ import { defineComponent } from 'vue';
   const {map} = useMapStore();
 
   return {
+    ///Quede por aquiiiii 
     
     onMyLocationClicked: ()=>{
       map.value?.flyTo({
