@@ -28,7 +28,7 @@
 .container-map{
   position: fixed;
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   background-color: #5cd9fefd;
 }
 </style>>

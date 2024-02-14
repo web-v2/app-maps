@@ -2,12 +2,12 @@
     <div v-if="distance" 
         class="trip-container column">
         <div class="col"> Distancia: <strong>{{ distance }} kms</strong> </div>
-        <div class="col"> Duración: <strong>{{ duration }} minutos</strong> </div>
+        <div class="col"> Duración: <strong>{{ timeDuration }}</strong> </div>
     </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, computed } from 'vue';
 import { useMapStore } from '../../composables';
 
 export default defineComponent({
@@ -15,11 +15,26 @@ export default defineComponent({
   setup() {
 
       const { distance, duration } = useMapStore()
+      function convertirMinutosAHoras(minutos: number): string {
+        const dt = minutos ?? 6; // Usar 6 si minutos es undefined
+        const horas = Math.floor(dt / 60);
+        const minutosRestantes = dt % 60;
+
+        if (horas === 0) {
+            return `${minutosRestantes} min.`;
+        } else if (minutosRestantes === 0) {
+            return `${horas} h`;
+        } else {
+            return `${horas} h y ${minutosRestantes} min.`;
+        }
+    }
+
+    const timeDuration = computed<string>(() => convertirMinutosAHoras(duration.value ?? 6));
 
     return {
-        distance,
-        duration
-    }
+      distance,      
+      timeDuration,
+    };
   }
 });
 </script>

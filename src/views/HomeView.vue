@@ -1,11 +1,13 @@
 <template>
   <div class="home">
-    <h1>Welcome to Your Vue.js + TypeScript App</h1>
+    <span class="text-center" >
+      <h1>Welcome to your AppMaps [Vue + TS] - Samir V2</h1>
+    </span>
     <hr>
     <MapView />
     <MyLocationBtn />
     <SearchBar />
-    <TripDetails />
+    <TripDetails />    
   </div>
 </template>
 
