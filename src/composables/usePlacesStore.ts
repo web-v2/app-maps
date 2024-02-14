@@ -22,6 +22,7 @@ export const usePlacesStore = () => {
         //Mutations
 
         //Actions
+        searchPlacesByTerm: (query:string) => store.dispatch('places/searchPlacesByTerm', query)
     }
 }
 
