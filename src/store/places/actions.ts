@@ -34,6 +34,7 @@ const actions: ActionTree<PlacesState, StateInterface> = {
             }
         }); 
 
+        //console.log(resp.data.features);
         commit('setPlaces', resp.data.features );
         return resp.data.features;
 

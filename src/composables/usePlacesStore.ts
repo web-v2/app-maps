@@ -13,8 +13,10 @@ export const usePlacesStore = () => {
     
     return {
         // State
-        isLoading: computed( () => store.state.places.isLoading ),
+        isLoading: computed( () => store.state .places.isLoading ),
         userLocation: computed( () => store.state.places.userLocation ),
+        isLoadingPlaces: computed( () => store.state.places.isLoadingPlaces),
+        places: computed( () => store.state.places.places),
 
         // Getters
         //isMapReady: computed<boolean>( () => store.getters['map/isMapReady'] ),
