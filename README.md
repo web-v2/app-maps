@@ -24,9 +24,9 @@ npm run build
 
 ## Aplicación en Producción 🚀
 
-```
-[App en netlify](https://vue-appmaps-v2.netlify.app/#/)
-```
+
+[App desplegada en Netlify](https://vue-appmaps-v2.netlify.app/#/)
+
 
 ## Autores ✒️
 
